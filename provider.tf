@@ -1,21 +1,21 @@
 provider "azurerm" {
   use_oidc        = true
-  tenant_id       = "21d8e422-7fd3-4634-8c8a-01dfde9a5502" # veradigm tanant ID
-  subscription_id = "dc79b1ca-cbfb-4c99-b9d6-5ddf93a869aa" # Zingana Subscription
-  client_id       = "3408abaf-3cca-4424-b0ab-95f07cea50fe" # Ue1ZgeCHcQAechc-tf01
+  tenant_id       = "2d323e4c-4e41-4e45-9713-2bffb7c4c541"
+  subscription_id = "15525204-448b-4828-998e-370e02b3d64f"
+  client_id       = "5f62cc0c-1eae-492b-9030-ed864e30f2bf" 
   features {}
 }
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "Ue1ZgeCHCQATerraformRG"
-    storage_account_name = "ue1zgechcqatfstoracc"
-    container_name       = "echc-tfstate"
-    key                  = "echcqa.terraform.tfstate"
+    resource_group_name  = "MC-RG"
+    storage_account_name = "mctf"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
     use_oidc             = true
-    tenant_id            = "21d8e422-7fd3-4634-8c8a-01dfde9a5502" # Veradigm tanant ID
-    subscription_id      = "dc79b1ca-cbfb-4c99-b9d6-5ddf93a869aa" # Zingana Subscription
-    client_id            = "3408abaf-3cca-4424-b0ab-95f07cea50fe" # Ue1ZgeCHcQAechc-tf01
+    tenant_id            = "2d323e4c-4e41-4e45-9713-2bffb7c4c541"
+    subscription_id      = "15525204-448b-4828-998e-370e02b3d64f"
+    client_id            = "5f62cc0c-1eae-492b-9030-ed864e30f2bf" 
   }
 }
 
