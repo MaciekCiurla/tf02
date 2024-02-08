@@ -9,9 +9,10 @@ terraform {
 }
 
 # Configure the Microsoft Azure Provider
-#provider "azurerm" {
-#  features {}
-#}
+provider "azurerm" {
+  use_oidc = true
+  features {}
+}
 
 variable "vm_count" {
   type = number
