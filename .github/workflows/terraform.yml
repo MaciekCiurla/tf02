@@ -28,6 +28,7 @@ jobs:
     - name: Azure Login
       uses: Azure/login@v1
       with:
+        auth-type: IDENTITY   
         client-id: "5f62cc0c-1eae-492b-9030-ed864e30f2bf"
         tenant-id: "2d323e4c-4e41-4e45-9713-2bffb7c4c541"
         subscription-id: "15525204-448b-4828-998e-370e02b3d64f" 
