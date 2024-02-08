@@ -26,11 +26,18 @@ jobs:
       uses: hashicorp/setup-terraform@v1
       
     - name: Azure Login
-      uses: Azure/login@v1.6.1
+      uses: Azure/login@v1
       with:
         client-id: "5f62cc0c-1eae-492b-9030-ed864e30f2bf"
         tenant-id: "2d323e4c-4e41-4e45-9713-2bffb7c4c541"
         subscription-id: "15525204-448b-4828-998e-370e02b3d64f" 
+
+    - name: Azure CLI script
+      uses: azure/CLI@v1
+      with:
+        azcliversion: latest
+        inlineScript: |
+          az account show
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
