@@ -1,6 +1,5 @@
 # script creates multiple RGs based on a given count using "count" structure
 terraform {
-  backend "local" {}
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
