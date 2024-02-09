@@ -6,6 +6,8 @@ terraform {
       version = "=3.7.0"
     }
   }
+  backend "azurerm" {
+  }
 }
 
 # Configure the Microsoft Azure Provider
